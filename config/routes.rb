@@ -6,4 +6,14 @@ Rails.application.routes.draw do
     resources :invoices, except: [:index]
   end
 
+  resources :users do
+    resources :businesses
+  end
 end
+
+
+# resources :users do
+  # resources :businesses do
+    # resources :invoices, except: [:index]
+  # end
+# end
