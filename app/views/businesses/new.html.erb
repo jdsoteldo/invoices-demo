@@ -1,0 +1,7 @@
+<%= form_for @business do |f| %>
+  <%= f.text_field :name, placeholder: "Biz Name", required: true %>
+  <%= f.text_field :email, placeholder: "Contact Email", required: true %>
+  <%= f.text_field :website, placeholder: "Website", required: false %>
+  <%= f.text_field :biz_type, placeholder: "Type", required: true %>
+  <%= f.submit %>
+<% end %>

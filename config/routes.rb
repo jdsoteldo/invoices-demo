@@ -3,17 +3,11 @@ Rails.application.routes.draw do
   root to: "invoices#index"
 
   resources :users do
-    resources :invoices, except: [:index]
-  end
-
-  resources :users do
     resources :businesses
   end
+
+  resources :businesses do
+    resources :invoices
+  end
+
 end
-
-
-# resources :users do
-  # resources :businesses do
-    # resources :invoices, except: [:index]
-  # end
-# end
