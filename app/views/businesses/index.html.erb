@@ -1,0 +1,3 @@
+<% @businesses.each do |biz| %>
+  <%= link_to biz.name, user_business_path(current_user, biz) %>
+<% end %>
